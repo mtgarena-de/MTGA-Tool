@@ -76,7 +76,7 @@ var settingsStore = new Store({
 
 const sha1 = require('js-sha1');
 
-const serverAddress = 'mtgatool.com';
+const serverAddress = 'www.mtg-arena.de';
 
 const debugLog = false;
 const debugNet = true;
@@ -2366,7 +2366,7 @@ function httpBasic() {
 
 		console.log("POST", _headers);
 		var post_data = qs.stringify(_headers);
-		options.headers = { 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': post_data.length};
+		options.headers = { 'User-Agent': 'Chrome', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': post_data.length};
 
 		var results = ''; 
 		var req = http.request(options, function(res) {

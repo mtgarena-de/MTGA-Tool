@@ -8,7 +8,7 @@ const Store = require('./store.js');
 const async = require("async");
 const fs    = require("fs");
 
-const {autoUpdater} = require("electron-updater");
+//const {autoUpdater} = require("electron-updater");
 
 // Adds debug features like hotkeys for triggering dev tools and reload
 require('electron-debug')({showDevTools: false});
@@ -66,7 +66,7 @@ app.on('ready', () => {
         }
     });
 
-    autoUpdater.checkForUpdatesAndNotify();
+    //autoUpdater.checkForUpdatesAndNotify();
 
     ipc.on('ipc_switch', function (event, method, arg) {
         if (debugIPC && method != "log_read") {
